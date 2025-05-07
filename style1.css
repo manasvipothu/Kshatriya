@@ -29,7 +29,7 @@ html {
     background-color: var(--primary-blue);
     color: white;
     scroll-behavior: smooth;
-    /* overflow-x: hidden; */
+     overflow-x: hidden; 
 }
 
 h1,
