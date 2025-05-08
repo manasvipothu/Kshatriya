@@ -765,9 +765,10 @@ footer {
         font-size: 0.5rem;
     }
      .product-card1 img {
-        width: 50%;
+        width: 30%;
         position: relative;
         top: 100px;
+         left:30px
         height: auto;
         transition: transform 0.5s ease;
     }
