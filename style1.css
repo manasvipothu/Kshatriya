@@ -757,20 +757,19 @@ footer {
     .product-label {
         font-size: 0.5rem;
     }
-    .product-label-1{
+   .product-label-1{
         position: relative;
-        top: 100px;
-        left: 130px;
+        top: 140px;
+        left: 140px;
         font-family: 'menlo';
         font-size: 0.5rem;
     }
-     .product-card1 img {
+    .product-card1 img {
         width: 30%;
         position: relative;
-        top: 100px;
+        top: 140px;
         left:120px
-        height: auto;
-        transition: transform 0.5s ease;
+        
     }
      @media (max-width: 600px) {
     .software-image {
