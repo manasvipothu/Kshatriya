@@ -11,6 +11,183 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
     <link href="style1.css" rel="stylesheet" />
+    <style>
+        /* Contact Container = Demo Section */
+.contact-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 20px;
+    background-color: #0f2135;
+    flex-wrap: wrap;
+}
+
+/* Contact Form = Demo Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    padding: 2rem;
+    background-color: #142d4c;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Title */
+.form-title h2 {
+    font-weight: 700;
+    color: var(--secondary-blue, #00a8cc);
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: 'Menlo', monospace;
+}
+
+.form-title hr {
+    border: none;
+    width: 100px;
+    height: 3px;
+    background-color: var(--secondary-blue, #00a8cc);
+    border-radius: 5px;
+    margin: 10px auto;
+}
+
+/* Input Fields */
+.form-input,
+.form-textarea {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding: 0.8rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--secondary-blue, #00a8cc);
+    border-radius: 4px;
+    color: #070707;
+    font-family: 'Avenir', sans-serif;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: #aacbd4;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    border-color: #0096c7;
+    outline: none;
+}
+
+.form-textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Submit Button */
+.submit-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+    font-size: 18px;
+    color: #ffffff;
+    background: linear-gradient(135deg, #00a8cc, #0096c7);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 5px 15px rgba(0, 150, 199, 0.4);
+    font-family: 'Avenir', sans-serif;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(135deg, #0096c7, #00a8cc);
+    transform: translateY(-3px);
+}
+
+/* Image Styling */
+.form-image img {
+    width: 450px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 102, 0.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .contact-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px;
+    }
+
+    .form-image img {
+        width: 100%;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #040f1f;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Poppins';
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.footer-logo {
+    width: 150px;
+    margin-bottom: 1rem;
+}
+
+.footer-links h3 {
+    color: var(--secondary-blue, #00a8cc);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: var(--light-text, #cfd8dc);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--secondary-blue, #00a8cc);
+}
+
+.copyright {
+    margin-top: 2rem;
+    color: var(--light-text, #cfd8dc);
+    font-size: 0.9rem;
+    opacity: 0.7;
+    font-family: 'Poppins';
+}
+
+    </style>
 </head>
 
 <body>
@@ -189,52 +366,42 @@
         </div>
     </section>
 
-    <div class="demo-section">
-  <h2 class="section-title">Schedule a Demo</h2>
-  <form action="https://formsubmit.co/manasvipothu2005@gmail.com" method="POST" class="demo-form">
-
-    <div class="form-group">
-      <label for="name">Full Name</label>
-      <input type="text" id="name" name="name" required />
-    </div>
-
-    <div class="form-group">
-      <label for="organization">Organization</label>
-      <input type="text" id="organization" name="organization" required />
-    </div>
-
-    <div class="form-group">
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required />
-    </div>
-
-    <div class="form-group">
-      <label for="phone">Phone</label>
-      <input type="tel" id="phone" name="phone" />
-    </div>
-
-    <div class="form-group">
-      <label for="interest">Product of Interest</label>
-      <select id="interest" name="interest" required>
-        <option value="">Select a product</option>
-        <option value="maritime">Unmanned Maritime Vehicles</option>
-        <option value="aerial">Unmanned Aerial Vehicles</option>
-        <option value="ground">Unmanned Ground Vehicles</option>
-        <option value="software">Software Solutions</option>
-      </select>
-    </div>
-
-    <div class="form-group">
-      <label for="message">Additional Information</label>
-      <textarea id="message" name="message"></textarea>
-    </div>
-
-    <input type="hidden" name="_captcha" value="false" />
-    <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html" />
-
-    <button type="submit" class="btn">Request Demo</button>
-  </form>
-</div>
+    <div class="contact-container">
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+          <div class="form-title">
+            <h2>Schedule a Demo</h2>
+            <hr />
+          </div>
+      
+          <!-- Web3Forms access key -->
+          <input type="hidden" name="access_key" value="5e5eb955-699c-41ef-99fa-c1bad7ab577f" />
+      
+          <!-- Demo form fields -->
+          <input type="text" name="name" placeholder="Full Name" class="form-input" required />
+          <input type="text" name="organization" placeholder="Organization" class="form-input" required />
+          <input type="email" name="email" placeholder="Email" class="form-input" required />
+          <input type="tel" name="phone" placeholder="Phone" class="form-input" />
+      
+          <select name="interest" class="form-input" required>
+            <option value="">Select a product</option>
+            <option value="maritime">Unmanned Maritime Vehicles</option>
+            <option value="aerial">Unmanned Aerial Vehicles</option>
+            <option value="ground">Unmanned Ground Vehicles</option>
+            <option value="software">Software Solutions</option>
+          </select>
+      
+          <textarea name="message" placeholder="Additional Information..." class="form-textarea"></textarea>
+      
+          <!-- Optional redirect on success -->
+          
+      
+          <button type="submit" class="submit-btn">Request Demo</button>
+        </form>
+      
+        <div class="form-image"></div>
+      </div>
+      
+      
 
       
 
