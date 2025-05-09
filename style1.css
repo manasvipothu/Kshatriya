@@ -6,12 +6,12 @@
     font-style: normal;
 }
 :root {
-    --primary-blue: #0b1a2d;
+    --primary-blue: #04101f;
     --secondary-blue: #5588a0;
     --accent-red: #b7332c;
     --dark-red: #060606;
     --light-text: #fff1e4;
-    --nav-cream: #FFF8F0;
+    --nav-cream: #fff1e4;
     --dark-bg: rgba(4, 16, 31, 0.7);
 }
 
@@ -29,7 +29,7 @@ html {
     background-color: var(--primary-blue);
     color: white;
     scroll-behavior: smooth;
-     overflow-x: hidden; 
+     
 }
 
 h1,
@@ -44,13 +44,14 @@ section {
 
 .section-title {
     text-align: center;
-   
+    color: #fff1e4;
     padding: 2rem 1rem 0;
     font-size: clamp(1.5rem, 3vw, 2rem);
     margin-bottom: 2rem;
     font-family: 'Poppins';
-   
+    font-weight: 300; /* Lighter weight */
 }
+
 
 .btn {
     display: inline-block;
@@ -247,7 +248,7 @@ nav.scrolled .logo img {
 
 .pulse {
     color: var(--accent-red);
-    text-shadow: 0 0 10px var(--accent-red);
+   
     margin-bottom: 0.5rem;
     display: block;
 }
@@ -348,7 +349,10 @@ nav.scrolled .logo img {
 }
 
 .product-card1 img {
-    width: 100%;
+    width: 80%;
+    position: relative;
+    top: 46px;
+    left: 43px;
     height: auto;
     transition: transform 0.5s ease;
 }
@@ -390,17 +394,22 @@ nav.scrolled .logo img {
     margin-bottom: 0.5rem;
     text-align: center;
     font-size: 1rem;
-    font-weight: bold;
-    font-family: 'Menlo', monospace;
+    font-family: 'Menlo';
     color: white;
 }
 
 
 .product-card:hover .product-label {
-    color: var(--dark-red);
+    color: #b7332c;
 }
 
-
+.product-label-1 {
+    position: relative;
+    top: 63px;
+    left: 99px;
+    font-family: 'menlo';
+    font-size: 20px;
+}
 .approach-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -876,7 +885,7 @@ footer {
     box-shadow: 0 0 6px 2px rgba(255, 0, 0, 0.4);
 }
 
-@keyframes pulseGlow {
+/* @keyframes pulseGlow {
 
     0%,
     100% {
@@ -886,7 +895,7 @@ footer {
     50% {
         box-shadow: 0 0 12px 4px rgba(255, 0, 0, 0.8);
     }
-}
+} */
 
 .vertical-line,
 .horizontal-line {
@@ -1068,10 +1077,7 @@ nav.scrolled .mobile-menu-btn {
       padding: 5px;
     }
     .red-line-svg{
-        width: 100%;
-        height: 2px;
-        position: relative;
-        top: 120px;
+       display: none;
     }
   }
   
@@ -1124,3 +1130,45 @@ nav.scrolled .mobile-menu-btn {
     }
     
 }
+@media (max-width: 768px) {
+    .products-row {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .product-card {
+      width: 100%; /* or 100% if you want full width */
+      margin-bottom: 1.9rem;
+      transform: translateY(0); /* reset for clean appearance */
+      opacity: 1;
+    }
+  
+    .product-card1.software {
+      width: 80%;
+      top: 0;
+      left: 0;
+      transform: translateY(0);
+      opacity: 1;
+      margin-bottom: 2rem;
+    }
+  
+    .product-card1 img {
+      width: 40%;
+      top: -20px;
+      left: 110px;
+    }
+  
+    .product-label {
+      font-size: 0.8rem;
+      position: static;
+      text-align: center;
+    }
+    .product-label-1 {
+        font-size: 0.8rem;
+        position: relative;
+        left: -1px;
+        top: -150px;
+        text-align: center;
+      }
+  }
+  
